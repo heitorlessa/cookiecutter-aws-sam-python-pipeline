@@ -19,6 +19,7 @@ Resources:
     # CodeBuild project and resources (S3 Bucket for build artifacts, Role, Project)
     BuildArtifactsBucket:
         Type: AWS::S3::Bucket
+        DeletionPolicy: Retain
 
     BuildArtifactBucketPolicy:
         Description: Setting Amazon S3 bucket policy for AWS CodePipeline access
