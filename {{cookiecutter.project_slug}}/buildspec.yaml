@@ -13,7 +13,8 @@ phases:
       - echo "[+] Installing dependencies...."
       # - pip install -r <src>/requirements.txt -t <src>/dev/
       - echo "[+] Running tests..."
-      # - python -m pytest tests/
+      - pip install pytest      
+      - python -m pytest tests/ -v
   build:
     commands:
       - echo "Starting SAM packaging `date` in `pwd`"
